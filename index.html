@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <!-- Tailwind CSS Script CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            accent: '#06b6d4',
+                        },
+                        darkbg: '#0f172a',
+                        cardbg: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
+
+<header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+
+            <a href="#" class="flex items-center space-x-2 text-2xl font-extrabold tracking-tight">
+                <span class="gradient-text">&lt;Ayan.Dev /&gt;</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-brand-accent transition-colors py-1">Обо мне</a>
+                <a href="#skills" class="hover:text-brand-accent transition-colors py-1">Навыки</a>
+                <a href="#projects" class="hover:text-brand-accent transition-colors py-1">Проекты</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors py-1">Контакты</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#contact" class="gradient-bg text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-all glow">
+                    Связаться
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" type="button" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden glass border-b border-gray-800">
+        <div class="px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Обо мне</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Навыки</a>
+            <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Проекты</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800">Контакты</a>
+            <a href="#contact" class="mobile-link block w-full text-center gradient-bg text-white px-4 py-2.5 rounded-full text-sm font-semibold mt-4">
+                Связаться
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="pt-20">
+
+    <section class="relative min-h-[85vh] flex items-center justify-center py-20 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-brand-accent text-sm font-medium mb-8">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                Открыт для новых проектов и предложений
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none mb-6">
+                Привет, я <span class="gradient-text">Аян Айдархан</span>
+            </h1>
+
+            <p class="text-xl sm:text-2xl text-slate-400 font-light max-w-3xl mx-auto mb-10">
+                Full-Stack / Web Developer & UI/UX Designer — создаю современные веб-интерфейсы, макеты в Figma и функциональные веб-приложения.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto gradient-bg text-white px-8 py-4 rounded-xl font-medium text-lg hover:opacity-95 transition-all shadow-lg glow">
+                    Мои Figma Проекты <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+
+                <a href="#contact" class="w-full sm:w-auto glass hover:bg-slate-800 text-white border border-slate-700 px-8 py-4 rounded-xl font-medium text-lg transition-all">
+                    Связаться
+                </a>
+            </div>
+
+            <div class="mt-16 flex justify-center space-x-6 text-2xl text-slate-400">
+                <a href="mailto:aksteam2481@gmaail.com" class="hover:text-white transition-colors" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://t.me/1luck" target="_blank" class="hover:text-brand-accent transition-colors" title="Telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+                <a href="https://github.com" target="_blank" class="hover:text-white transition-colors" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-20 relative border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold">
+                    Обо <span class="gradient-text">мне</span>
+                </h2>
+                <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <div class="glass p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-500/20 rounded-full blur-2xl group-hover:bg-brand-accent/30 transition-all"></div>
+
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80"
+                         alt="Разработка и дизайн"
+                         class="rounded-xl w-full h-80 object-cover shadow-2xl mb-6">
+
+                    <div class="flex justify-between items-center text-sm text-slate-400 border-t border-slate-700/50 pt-4">
+                        <span><i class="fa-brands fa-figma text-brand-accent mr-2"></i> UI/UX Figma</span>
+                        <span><i class="fa-solid fa-code text-emerald-400 mr-2"></i> Чистый код</span>
+                        <span><i class="fa-solid fa-mobile-screen text-brand-500 mr-2"></i> Адаптивность</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-white">
+                        Проектирую интерфейсы и воплощаю идеи в жизнь
+                    </h3>
+
+                    <p class="text-slate-300 leading-relaxed">
+                        Я занимаюсь UI/UX дизайном в Figma и веб-разработкой. Создаю удобные, современные и визуально привлекательные концепты сайтов и мобильных приложений.
+                    </p>
+
+                    <p class="text-slate-300 leading-relaxed">
+                        Умею выстраивать компонентные системы (Design Systems), работать с Auto Layout в Figma, а также переводить готовые макеты в живой верстальный код (HTML, CSS, JavaScript, Java).
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="glass p-4 rounded-xl border border-slate-700/50">
+                            <div class="text-3xl font-extrabold gradient-text">3+</div>
+                            <div class="text-sm text-slate-400">Проекта в Figma</div>
+                        </div>
+
+                        <div class="glass p-4 rounded-xl border border-slate-700/50">
+                            <div class="text-3xl font-extrabold gradient-text">100%</div>
+                            <div class="text-sm text-slate-400">Внимание к деталям</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold">
+                    Навыки и <span class="gradient-text">Технологии</span>
+                </h2>
+
+                <p class="text-slate-400 mt-2">
+                    Мой инструментарий для UI/UX дизайна и веб-разработки
+                </p>
+
+                <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-700/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-figma text-3xl text-purple-400"></i>
+                            <h3 class="font-bold text-lg">Figma / UI UX</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-accent">95%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-700/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+                            <h3 class="font-bold text-lg">HTML5 / Web</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-accent">90%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-orange-500 to-amber-500 h-full rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-700/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-css3-alt text-3xl text-blue-500"></i>
+                            <h3 class="font-bold text-lg">CSS3 / Tailwind</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-accent">90%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-full rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-700/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                            <h3 class="font-bold text-lg">JavaScript (ES6+)</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-accent">85%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-yellow-400 to-amber-500 h-full rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-700/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-java text-3xl text-red-500"></i>
+                            <h3 class="font-bold text-lg">Java / OOP</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-accent">80%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-red-500 to-rose-400 h-full rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-700/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-laptop-code text-3xl text-emerald-400"></i>
+                            <h3 class="font-bold text-lg">Responsive Grid</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-accent">95%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-emerald-400 to-teal-500 h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold">
+                    Мои <span class="gradient-text">Figma Проекты</span>
+                </h2>
+
+                <p class="text-slate-400 mt-2">
+                    Интерактивные макеты напрямую из Figma
+                </p>
+
+                <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium gradient-bg text-white transition-all cursor-pointer" data-filter="all">Все</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium glass hover:bg-slate-800 transition-all cursor-pointer" data-filter="uiux">UI/UX Design</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium glass hover:bg-slate-800 transition-all cursor-pointer" data-filter="web">Веб-сайты</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium glass hover:bg-slate-800 transition-all cursor-pointer" data-filter="java">Java / Приложения</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- PROJECT 1 -->
+                <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700/50 flex flex-col hover:-translate-y-2 transition-all duration-300" data-category="uiux web">
+
+                    <div class="relative overflow-hidden h-72 bg-slate-900 border-b border-slate-800">
+                        <iframe style="border: none;" width="100%" height="100%" src="https://embed.figma.com/design/Wp6aToEM9LiJrXWqC2s2dv/Untitled?node-id=0-1&embed-host=share" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300">UI/UX Design</span>
+                                <span class="text-xs text-slate-500">Figma Project 1</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-2 text-white">
+                                Web & UI/UX Design System
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mb-4">
+                                Интерактивный макет и UI-концепт веб-интерфейса, спроектированный в Figma с компонентной сеткой.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Figma</span>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">UI/UX</span>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Design System</span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <a href="https://www.figma.com/design/Wp6aToEM9LiJrXWqC2s2dv/Untitled" target="_blank" class="flex-1 text-center py-2.5 gradient-bg rounded-xl text-sm font-medium text-white hover:opacity-90 transition-opacity">
+                                    <i class="fa-brands fa-figma mr-1.5"></i> Figma Link
+                                </a>
+
+                                <button onclick="openModal(1)" class="px-4 py-2.5 glass rounded-xl text-sm font-medium hover:bg-slate-800 transition-colors" title="Инфо">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700/50 flex flex-col hover:-translate-y-2 transition-all duration-300" data-category="uiux web">
+
+                    <div class="relative overflow-hidden h-72 bg-slate-900 border-b border-slate-800">
+                        <iframe style="border: none;" width="100%" height="100%" src="https://embed.figma.com/design/SZnqfmP9HFPPHDFjVgI4eU/Untitled?node-id=0-1&embed-host=share" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300">UI/UX Design</span>
+                                <span class="text-xs text-slate-500">Figma Project 2</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-2 text-white">
+                                Interactive App & Web Prototype
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mb-4">
+                                Прототип и векторный дизайн пользовательских интерфейсов с гибкой системой автолейаутов.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Figma</span>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Prototyping</span>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Mobile/Web</span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <a href="https://www.figma.com/design/SZnqfmP9HFPPHDFjVgI4eU/Untitled" target="_blank" class="flex-1 text-center py-2.5 gradient-bg rounded-xl text-sm font-medium text-white hover:opacity-90 transition-opacity">
+                                    <i class="fa-brands fa-figma mr-1.5"></i> Figma Link
+                                </a>
+
+                                <button onclick="openModal(2)" class="px-4 py-2.5 glass rounded-xl text-sm font-medium hover:bg-slate-800 transition-colors" title="Инфо">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700/50 flex flex-col hover:-translate-y-2 transition-all duration-300" data-category="uiux web">
+
+                    <div class="relative overflow-hidden h-72 bg-slate-900 border-b border-slate-800">
+                        <iframe style="border: none;" width="100%" height="100%" src="https://embed.figma.com/design/0enNMBOvnhH2E8kWNqAqSu/%D0%B7%D0%B0%D1%87%D0%B5%D1%82?node-id=3-3&embed-host=share" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400">UI/UX Design</span>
+                                <span class="text-xs text-slate-500">Figma Project 3</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-2 text-white">
+                                Макет «Зачет» — Web Interface
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mb-4">
+                                Учебный веб-проект и векторный дизайн интерфейса, спроектированный для курсовой работы / зачета.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Figma</span>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Academic Project</span>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Auto Layout</span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <a href="https://www.figma.com/design/0enNMBOvnhH2E8kWNqAqSu/%D0%B7%D0%B0%D1%87%D0%B5%D1%82" target="_blank" class="flex-1 text-center py-2.5 gradient-bg rounded-xl text-sm font-medium text-white hover:opacity-90 transition-opacity">
+                                    <i class="fa-brands fa-figma mr-1.5"></i> Figma Link
+                                </a>
+
+                                <button onclick="openModal(3)" class="px-4 py-2.5 glass rounded-xl text-sm font-medium hover:bg-slate-800 transition-colors" title="Инфо">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+
+        <div class="glass max-w-2xl w-full rounded-2xl overflow-hidden border border-slate-700 relative animate-fade-in max-h-[90vh] overflow-y-auto">
+
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl z-10 w-10 h-10 rounded-full bg-slate-800/80 flex items-center justify-center cursor-pointer">
+                &times;
+            </button>
+
+            <div class="h-80 relative bg-slate-900 border-b border-slate-800" id="modal-iframe-container">
+                <iframe id="modal-iframe" style="border: none;" width="100%" height="100%" src="" allowfullscreen></iframe>
+            </div>
+
+            <div class="p-8">
+                <span id="modal-category" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-500/20 text-brand-accent"></span>
+
+                <h3 id="modal-title" class="text-2xl font-bold mt-2 mb-4 text-white"></h3>
+
+                <p id="modal-desc" class="text-slate-300 leading-relaxed mb-6"></p>
+
+                <div class="mb-6">
+                    <h4 class="text-sm font-semibold text-slate-400 mb-2">
+                        Технологии & Теги:
+                    </h4>
+
+                    <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <div>
+                    <a id="modal-link" href="#" target="_blank" class="block w-full text-center py-3 gradient-bg rounded-xl font-medium text-white hover:opacity-90 transition-opacity">
+                        <i class="fa-brands fa-figma mr-2"></i>
+                        Открыть оригинальный проект в Figma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="py-20 bg-slate-900/50 border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold">
+                    Связаться <span class="gradient-text">со мной</span>
+                </h2>
+
+                <p class="text-slate-400 mt-2">
+                    Есть вопрос или проект для совместной работы? Напишите мне!
+                </p>
+
+                <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <div class="space-y-6">
+
+                    <a href="mailto:aksteam2481@gmail.com" class="glass p-6 rounded-2xl flex items-center space-x-4 border border-slate-700/50 hover:border-brand-500 transition-all block">
+                        <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+
+                            <div class="text-sm text-slate-400">Email</div>
+                            <div class="font-semibold text-white">aksteam2481@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me" target="_blank" class="glass p-6 rounded-2xl flex items-center space-x-4 border border-slate-700/50 hover:border-brand-accent transition-all block">
+                        <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+
+                        <div>
+                            <div class="text-sm text-slate-400">Telegram</div>
+                            <div class="font-semibold text-white">1luck10</div>
+                        </div>
+                    </a>
+
+                    <div class="glass p-6 rounded-2xl flex items-center space-x-4 border border-slate-700/50">
+                        <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <div class="text-sm text-slate-400">Локация</div>
+                            <div class="font-semibold text-white">Алматы, Казахстан</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-slate-700/50">
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1">
+                                Ваше имя
+                            </label>
+
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-white transition-all" placeholder="Ваше имя">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1">
+                                Ваш Email или Telegram
+                            </label>
+
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-white transition-all" placeholder="@username или mail@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1">
+                                Сообщение
+                            </label>
+
+                            <textarea rows="4" required class="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-white transition-all" placeholder="Здравствуйте! Хочу заказать дизайн макет..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full gradient-bg text-white py-3.5 rounded-xl font-semibold hover:opacity-90 transition-all glow">
+                            Отправить сообщение
+                            <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+    <div class="max-w-7xl mx-auto px-4">
+        <p>© 2026 Аян Айдархан. Все права защищены. Создано с HTML, Tailwind CSS & Figma.</p>
+    </div>
+</footer>
+
+<!-- Your JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
